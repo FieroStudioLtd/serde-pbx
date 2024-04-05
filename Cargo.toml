@@ -1,0 +1,13 @@
+[package]
+name = "serde-pbx"
+version = "0.1.0"
+edition = "2021"
+authors = [ "Ruan Pearce-Authers <ruanpa@outlook.com>" ]
+description = "A Rust crate for working with Apple's .pbxproj format"
+license = "MIT"
+repository = "https://github.com/FieroStudioLtd/serde-pbx"
+
+[dependencies]
+indexmap = { version = "2", features = [ "serde" ] }
+serde = { version = "1", features = [ "derive" ] }
+serde_repr = "0.1"
