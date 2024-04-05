@@ -60,6 +60,6 @@ let project_id = project.add_object(PBXObject::PBXProject {
 // and then remember to set the root object too!
 project.set_root_object(project_id);
 
-let pbx_string = serde_pbx::to_string(&project);
+let pbx_string = serde_pbx::to_string(&project).expect("failed to serialise project");
 std::fs::write("my_cool_project.xcodeproj/project.pbxproj", pbx_string).expect("failed to write project");
 ```
