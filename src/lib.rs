@@ -115,6 +115,6 @@ impl PBXProject {
 	}
 }
 
-pub fn build_settings<const N: usize>(arr: [(&'static str, &'static str); N]) -> IndexMap<String, String> {
+pub fn build_settings<const N: usize>(arr: [(&str, &str); N]) -> IndexMap<String, String> {
 	arr.iter().map(|(k, v)| ((*k).to_owned(), (*v).to_owned())).collect()
 }
